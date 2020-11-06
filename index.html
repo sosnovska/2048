@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <title>2048</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="app.js" charset="utf-8"></script>
 </head>
+<div class="container">
+    <div class="heading">
 
-<body>
+        <h1 class="title">2048</h1>
+        <div class="scores-container">
+        <div class="score-container">
+            <div class="score-title">score</div>
+            <span id="score">0</span>
+
+        </div>
+        <div class="best-container">
+            <div class="score-title">best</div>
+            <span id="best">0</span>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="grid-above-game">
+        <p class="game-intro">
+            Join the tiles and get to <strong>2048!</strong>
+        </p>
+        <div class="new-game-button" id="new-button" onclick="restart()">New Game</div>
+    </div>
+    <div class="result" id="game-result"></div>
+
+    <div class="grid"></div>
+    <div class="description">
+        HOW TO PLAY: Use your arrow keys to move the tiles. Tiles with the same number merge into one when they touch.
+        Add them up to reach 2048!
+    </div>
+</div>
+
+
+
 </body>
 
 </html>
