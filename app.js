@@ -19,20 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         generate()
         generate()
-        addColours()
     }
     createBoard()
 
     document.getElementById('new-button').onclick = function restart() {
         score = 0
+        scoreDisplay.innerHTML = score
         for (let i = 0; i < width * width; i++) {
             squares[i].innerHTML = 0
         }
         generate()
         generate()
-        addColours()
         resultDisplay.innerHTML = ''
-        score = 0
     }
 
     document.addEventListener('keyup', control)
