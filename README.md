@@ -6,5 +6,11 @@ Popular game in JavaScript, CSS and HTML - desktop version only.
 - Download the repository and open `index.html` file in your browser.
 
 ## Goals
-- Create a simple game
-- Practice HTML and CSS and JavaScript
+- Write game logic from scratch
+- Practice HTML, CSS and JavaScript
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## About 2048
+2048 is a single-player sliding tile puzzle video originally created by Italian web developer Gabriele Cirulli and published on [GitHub](https://github.com/gabrielecirulli/2048).
