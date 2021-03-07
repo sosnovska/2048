@@ -1,8 +1,16 @@
 .container {
-    width: 440px;
+    width: 56%;
     margin: 0 auto;
     background-color: #283747;
-    padding: 25px;
+    display: -ms-flexbox;
+    /* IE10 */
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    display: grid;
+    grid-template-columns: auto 445px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .grid {
@@ -21,16 +29,18 @@
     text-align: center;
     color: #f3f3f3;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-right: 5px;
     margin-left: 5px;
+}
+
+.column-container {
+    padding: 0 4px;
 }
 
 .result {
     position: absolute;
     text-align: center;
     font-size: 70px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #f3f3f3;
     text-shadow: -1px 0 #283747, 0 1px #283747, 1px 0 #283747, 0 -1px #283747;
 }
@@ -40,12 +50,10 @@
     justify-content: space-between;
     align-items: center;
     color: #DE354C;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 26px;
 }
 
 .grid-above-game {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,6 +75,7 @@
 .scores-container {
     float: right;
     display: flex;
+    margin: 10px;
 }
 
 .scores-container *+* {
@@ -74,7 +83,6 @@
 }
 
 .new-game-button {
-    display: inline-block;
     background: #DE354C;
     padding: 0 25px;
     color: #f9f6f2;
@@ -86,8 +94,10 @@
     flex-shrink: 0;
 }
 
-.description {
+.rules-container {
+    margin-top: 10px;
     padding-top: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #f9f6f2;
+    text-align: justify;
+    text-justify: inter-word;
 }
