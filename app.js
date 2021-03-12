@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 4
     let squares = []
     let score = 0
-    let best = 0
+    let best = 0;
 
 
     //create a board
     function createBoard() {
+        resultDisplay.style.display = "none"
         for (let i = 0; i < width * width; i++) {
             square = document.createElement('div')
             square.innerHTML = 0
@@ -22,16 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     createBoard()
 
-    document.getElementById('new-button').onclick = function restart() {
-        score = 0
-        scoreDisplay.innerHTML = score
-        for (let i = 0; i < width * width; i++) {
-            squares[i].innerHTML = 0
-        }
-        generate()
-        generate()
-        resultDisplay.innerHTML = ''
-    }
+    document.getElementById('new-button').onclick = restart;
+    document.getElementById('new-button-game-over').onclick = restart;
+
+
 
     document.addEventListener('keyup', control)
 
@@ -46,6 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         addColours()
         checkResult()
+    }
+
+    function restart() {
+        score = 0
+        scoreDisplay.innerHTML = score
+        for (let i = 0; i < width * width; i++) {
+            squares[i].innerHTML = 0
+        }
+        generate()
+        generate()
+        resultDisplay.style.display = "none"
     }
 
     function containsZero(a) {
@@ -281,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (zeros === 0 && isMoveAvailable == false) {
-            resultDisplay.innerHTML = 'GAME OVER'
+            resultDisplay.style.display = "block";
         }
     }
 
